@@ -8,19 +8,19 @@ class Icon extends Component {
     
     return (
       <div>
-        {state ?
+        {state ? (
           <div>
             <a href={url} title={name}>
               <img src={source} alt={service} className='access img-fluid' />
             </a>
-          </div>    
-        :
+          </div>
+        ) : (
           <div>
             <a href={url} className='disabled'>
               <img src={source} alt={service} className='disabled img-fluid' />
             </a>
           </div>
-        }
+        )}
       </div>
     )
   }
