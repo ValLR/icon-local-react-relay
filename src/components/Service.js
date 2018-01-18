@@ -6,7 +6,7 @@ class Service extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      hasService: false,
+      connected: false,
       url: "",
       name: "",
     }
@@ -17,7 +17,7 @@ class Service extends Component {
     project.resources.edges.find(({node}) => 
       node.type === service ?
         this.setState({
-          hasService: true,
+          connected: true,
           url: node.url,
           name: node.name,
         })
@@ -27,11 +27,11 @@ class Service extends Component {
   }
 
   render() {
-    const { name, url, hasService } = this.state;
+    const { name, url, connected } = this.state;
     const { service } = this.props
 
     return (
-      <Icon key={url} name={name} url={url} state={hasService} service={service} />
+      <Icon key={url} name={name} url={url} state={connected} service={service} />
     )
   }
 }
