@@ -13,7 +13,7 @@ class Service extends Component {
   }
 
   componentDidMount(){
-    const { project, service } = this.props
+    const { project, service } = this.props;
     project.resources.edges.find(({node}) => 
       node.type === service ?
         this.setState({
