@@ -11,7 +11,7 @@ const available_services = ['pivotal', 'github', 'codeship', 'papertrail', 'sent
 class Project extends Component {
 
   render() {
-    const { id, canonicalName } = this.props.project;
+    const { canonicalName } = this.props.project;
     const { project } = this.props;
     
     return (
