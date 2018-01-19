@@ -9,9 +9,12 @@ import {
 class ProjectData extends Component {
 
   render() {
+
+    const { edges } = this.props.viewer.allProjects;
+
     return (
       <div>
-        {this.props.viewer.allProjects.edges.map(({node}) =>
+        {edges.map(({node}) =>
             <Project key={node.__id} project={node} />
         )}
       </div>
